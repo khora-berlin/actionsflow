@@ -3,5 +3,5 @@ on:
     access_token: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
 
 jobs:
-    run: 
+    run: |
       curl -X POST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H 'Accept: application/vnd.github.v3+json' https://api.github.com/repos/octocat/hello-world/dispatches -data '{"event_type": "build_application"}'

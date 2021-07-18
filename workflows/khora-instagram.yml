@@ -4,9 +4,5 @@ on:
 
 jobs:
     run: |
-      curl -XPOST -u "${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" \ 
-      -H "Accept: application/vnd.github.everest-preview+json" \ 
-      -H "Content-Type: application/json" \
-      https://api.github.com/repos/octocat/hello-world/dispatches \
-      --data '{"event_type": "build_application"}'
+      curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/kohra-berlin/website/actions/workflows/build.yaml/dispatches --data '{"ref": "master"}'
  

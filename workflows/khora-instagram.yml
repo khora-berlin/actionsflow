@@ -3,7 +3,5 @@ on:
     access_token: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
 
 jobs:
-    run: |
-      curl 
-      --request POST 
-      --url 'https://api.github.com/repos/khora-berlin/website/dispatches'
+  run: |
+    curl --request POST --url 'https://api.github.com/repos/khora-berlin/website/dispatches'

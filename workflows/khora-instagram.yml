@@ -12,7 +12,6 @@ jobs:
         with:
           url: https://api.github.com/repos/khora-berlin/website/dispatches
           method: POST
-          body: |
-            {
-            }
+          headers: '{ "Authorization": "token ${{secrets.PAT_TOKEN}}",  "Accept": "application/vnd.github.v3+json"}'
+          data: '{"event_type": "build", "client_payload": { "version": "1.2.3"}}
 

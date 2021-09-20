@@ -1,6 +1,6 @@
 on:
   instagram:
-    access_token: ${{ secrets.KHORA_INSTA_API_KEYS }}
+    access_token: ${{ secrets.KHORA_INSTA_API_KEY }}
 
 jobs:
   request:

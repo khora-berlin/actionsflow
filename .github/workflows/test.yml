@@ -4,16 +4,11 @@ on:
       - main 
 
 jobs:
+  
   request:
     name: Dispatch Khora-Berlin build action
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatxh test
-        run: curl \
-             -X POST \
-             -H "Accept: application/vnd.github.v3+json" \
-              https://api.github.com/repos/khora-berlin/khora-berlin.github.io/dispatches \
-             -d '{"event_type":"build"}'
       - name: Make a HTTP Request
         uses: actionsflow/axios@v1
         with:

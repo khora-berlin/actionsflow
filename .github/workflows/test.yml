@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  request:
+    name: Make a HTTP Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make a HTTP Request
+        uses: actionsflow/axios@v1
+        with:
+          url: https://api.github.com/repos/khora-berlin/website/dispatches
+          method: POST
+          headers: '{ "Authorization": "token ${{secrets.PAT_TOKEN}}",  "Accept": "application/vnd.github.v3+json"}'
+          data: '{"event_type": "build", "client_payload": { "version": "1.2.3"}}'
+          body: {}

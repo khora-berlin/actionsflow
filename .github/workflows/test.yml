@@ -5,7 +5,7 @@ on:
 
 jobs:
   request:
-    name: Make a HTTP Request
+    name: Dispatch Khora-Berlin build action
     runs-on: ubuntu-latest
     steps:
       - name: Make a HTTP Request

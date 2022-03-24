@@ -1,7 +1,4 @@
 on:
-  push:
-    branches:
-      - main 
   instagram:
     access_token: ${{ secrets.KHORA_INSTA_API_KEY }}
 
